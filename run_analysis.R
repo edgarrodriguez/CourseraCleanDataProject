@@ -1,6 +1,7 @@
 
 
 library("data.table", lib.loc="C:/Program Files/R/R-3.0.2/library")
+library("plyr", lib.loc="C:/Program Files/R/R-3.0.2/library")
 
 ##########################################################################################
 ##
@@ -200,9 +201,12 @@ generate_tidy_data <- function () {
         ## Write tidy file 1
         write.table(merged_table_with_activity_names,"tidyfile1.txt",sep=" ",quote=FALSE,row.names=FALSE)     
 
+        ## Create tidy file 2 datatable
+        tidyfile2_datatable <- ddply(merged_table_with_activity_names,.(Activity,Subject),summarize,Average=ave(c(2:87),FUN=ave))
+        
         
         ## 5.Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
-        
+        write.table(tidyfile2_datatable,"tidyfile2.txt",sep=" ",quote=FALSE,row.names=FALSE)
         
         
 }
