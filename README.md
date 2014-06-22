@@ -1,17 +1,28 @@
-Coursera Clean Data Course Project
+Coursera Getting and Cleaning Data Course Project
 ========================================================
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring web pages (click the **Help** toolbar button for more details on using R Markdown).
+This material was produced for Coursera Getting and Cleaning Data course project.
 
-When you click the **Knit HTML** button a web page will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+In order to run the run_analysis.R script you need to
 
-```{r}
-summary(cars)
-```
+1. Download project files from 
 
-You can also embed plots, for example:
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-```{r fig.width=7, fig.height=6}
-plot(cars)
-```
+2. Unzip the files in your working directory. You should see the following directory in your working directory after unziping
+
+getdata_projectfiles_UCI HAR Dataset
+
+3. Copy  run_analysis.R script to your working directory.
+
+Note: Make sure you have installed data.table package.
+
+
+To run the script 
+
+1. use Source command to read code into memory
+
+2. In the R console call the function generate_tidy_data()
+
+3. Result files will be written to tidyfile1.txt and tidyfile2.txt (text delimited with space)
 
